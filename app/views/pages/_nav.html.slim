@@ -1,0 +1,11 @@
+.nav.row.z-depth-1
+  .s12
+    ul.nav_items
+      li.nav_items__item class=(nav_tab_selected[:home])
+        = link_to 'Лента новостей', root_path
+      li.nav_items__item class=(nav_tab_selected[:curriculumvitae])
+        = link_to 'Резюме', curriculumvitae_path
+      li.nav_items__item class=(nav_tab_selected[:links])
+        = link_to 'Коллекция ссылок', links_path
+      li.nav_items__item class=(nav_tab_selected[:faq])
+        = link_to 'FAQ', faq_path
