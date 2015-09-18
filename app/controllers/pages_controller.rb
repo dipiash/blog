@@ -8,9 +8,6 @@ class PagesController < ApplicationController
   def faq
   end
 
-  def contacts
-  end
-
-  def help
+  def curriculumvitae
   end
 end
