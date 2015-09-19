@@ -1,15 +1,32 @@
 body {
   background: #F4F7FA;
+  min-width: 320px;
 }
 
 .nav_items {
-  display: flex;
   position: relative;
   height: 48px;
   background-color: #FFF;
   margin: 0px auto;
   width: 100%;
   white-space: nowrap;
+
+  @media (min-width: 561px) {
+    display: flex;
+
+    &__item {
+      flex-grow: 1;
+    }
+
+  }
+
+  @media (min-width: 0px) and (max-width: 560px) {
+    width: 100%;
+
+    &__item {
+      width: 100%;
+    }
+  }
 
   &__item {
     padding: 0px;
@@ -21,7 +38,7 @@ body {
     margin: 0px;
     text-transform: uppercase;
     letter-spacing: 0.8px;
-    flex-grow: 1;
+    background: #fff;
 
     &--selected {
       background: #eee;
