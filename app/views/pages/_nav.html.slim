@@ -1,9 +1,9 @@
 .nav.row.z-depth-1
   .s12
     ul.nav_items
-      li.nav_items__item class=(nav_tab_selected[:home])
+      li.nav_items__item
         = link_to 'Лента новостей', root_path
-      li.nav_items__item class=(nav_tab_selected[:links])
+      li.nav_items__item
         = link_to 'Коллекция ссылок', links_path
-      li.nav_items__item class=(nav_tab_selected[:faq])
+      li.nav_items__item
         = link_to 'FAQ', faq_path
