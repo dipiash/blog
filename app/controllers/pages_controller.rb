@@ -7,7 +7,4 @@ class PagesController < ApplicationController
 
   def faq
   end
-
-  def curriculumvitae
-  end
 end
