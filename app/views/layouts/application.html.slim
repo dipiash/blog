@@ -10,7 +10,14 @@ html
     = render 'pages/nav'
     .container
       .col.s12
-        p.notice=  notice
-        p.alert= alert
-
         = yield
+
+    javascript:
+      $(document).ready(function(){
+        function selected_nav_item() {
+          var path = window.location.pathname;
+          $(document).find('a[href="' + path + '"]').parent().addClass('nav_items__item--selected')
+        }
+
+        selected_nav_item();
+      });
