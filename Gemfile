@@ -15,6 +15,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'slim'
 gem 'devise'
+gem 'devise-i18n'
 
 group :development, :test do
   gem 'byebug'
