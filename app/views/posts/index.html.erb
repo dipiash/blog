@@ -1,33 +1,36 @@
-<p id="notice"><%= notice %></p>
+<div class="col s12 z-depth-1 white" style="padding: 30px;">
 
-<h1>Список записей</h1>
+  <h1 style="margin: 0;">Список записей</h1>
 
-<%= link_to 'Создать новую запись', new_post_path %>
+  <p id="notice"><%= notice %></p>
 
-<%= will_paginate %>
+  <%= link_to 'Создать новую запись', new_post_path, class: 'btn' %>
 
-<table>
-  <thead>
-    <tr>
-      <th>Название</th>
-      <th>Текст записи</th>
-      <th colspan="3"></th>
-      <th>Время создания</th>
-    </tr>
-  </thead>
+  <%= will_paginate %>
 
-  <tbody>
-    <% @posts.each do |post| %>
+  <table>
+    <thead>
       <tr>
-        <td><%= post.title %></td>
-        <td><%= post.content %></td>
-        <td><%= post.created_at %></td>
-        <td><%= link_to 'Показать', post %></td>
-        <td><%= link_to 'Редактировать', edit_post_path(post) %></td>
-        <td><%= link_to 'Удалить', post, method: :delete, data: { confirm: 'Вы уверены, что хотите удалить запись?' } %></td>
+        <th>Название</th>
+        <th>Текст записи</th>
+        <th colspan="3"></th>
+        <th>Время создания</th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
 
-<%= will_paginate %>
+    <tbody>
+      <% @posts.each do |post| %>
+        <tr>
+          <td><%= post.title %></td>
+          <td><%= post.content %></td>
+          <td><%= post.created_at %></td>
+          <td><%= link_to 'Показать', post %></td>
+          <td><%= link_to 'Редактировать', edit_post_path(post) %></td>
+          <td><%= link_to 'Удалить', post, method: :delete, data: { confirm: 'Вы уверены, что хотите удалить запись?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <%= will_paginate %>
+</div>
