@@ -8,6 +8,10 @@ class PostsController < ApplicationController
     @posts = Post.all.paginate(:page => params[:page], :per_page => 2)
   end
 
+  def feed
+    @posts = Post.all.paginate(:page => params[:page], :per_page => 2)
+  end
+
   # GET /posts/1
   # GET /posts/1.json
   def show
