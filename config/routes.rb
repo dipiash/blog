@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   mount Ckeditor::Engine => '/ckeditor'
   resources :posts
   devise_for :users, :path => '', :path_names => {:sign_in => 'login', :sign_out => 'logout'}
-  root 'pages#home'
+  root 'posts#feed'
 
   match 'links', to: 'pages#links', via: :get
   match 'faq', to: 'pages#faq', via: :get
