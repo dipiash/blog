@@ -2,6 +2,10 @@
 
 <h1>Список записей</h1>
 
+<%= link_to 'Создать новую запись', new_post_path %>
+
+<%= will_paginate %>
+
 <table>
   <thead>
     <tr>
@@ -26,6 +30,4 @@
   </tbody>
 </table>
 
-<br>
-
-<%= link_to 'Создать новую запись', new_post_path %>
+<%= will_paginate %>
