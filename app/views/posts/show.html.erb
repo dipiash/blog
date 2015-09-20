@@ -2,12 +2,12 @@
 
 <p>
   <strong>Название:</strong>
-  <%= @post.title %>
+  <%= @post.title.html_safe %>
 </p>
 
 <p>
   <strong>Текст записи:</strong>
-  <%= @post.content %>
+  <%= @post.content.html_safe %>
 </p>
 
 <p>
