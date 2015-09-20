@@ -6,6 +6,7 @@ Rails.application.routes.draw do
 
   match 'links', to: 'pages#links', via: :get
   match 'faq', to: 'pages#faq', via: :get
+  match 'feed', to: 'posts#feed', via: :get
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
