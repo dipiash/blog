@@ -19,6 +19,10 @@ $secondary-color: color("light-blue", "darken-1") !default;
 
 @import "materialize";
 
+.pagination {
+  text-align: center;
+}
+
 .pagination a li {
   margin-top: -25px;
 
