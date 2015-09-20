@@ -19,7 +19,12 @@ $secondary-color: color("light-blue", "darken-1") !default;
 
 @import "materialize";
 
-.pagination a li.active {
+.pagination a li {
+  margin-top: -25px;
+
+  &.active {
     background: #039BE5;
     color: #fff;
+  }
 }
+
