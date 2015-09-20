@@ -19,6 +19,7 @@ gem 'devise-i18n'
 gem 'will_paginate'
 gem 'will_paginate-materialize'
 gem 'russian'
+gem 'ckeditor', :git => 'https://github.com/galetahub/ckeditor'
 
 group :development, :test do
   gem 'byebug'
