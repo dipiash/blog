@@ -9,4 +9,6 @@
         = link_to 'FAQ', faq_path
       - if user_signed_in?
         li.nav_items__item
+          = link_to 'Записи', posts_path
+        li.nav_items__item
           = link_to 'Выход', destroy_user_session_path, :method => :delete
