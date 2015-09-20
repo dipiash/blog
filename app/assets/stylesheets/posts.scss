@@ -1,3 +1,28 @@
 // Place all the styles related to the Posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.card-action {
+  time {
+    @media (min-width: 0px) and (max-width: 560px) {
+      display: block;
+    }
+  }
+
+  a {
+    float: right;
+    padding: 5px;
+    margin-top: -5px;
+    color: #039BE5!important;
+
+    &:hover {
+      background: #e1f5fe ;
+    }
+
+    @media (min-width: 0px) and (max-width: 560px) {
+      width: 100%;
+      float: none;
+      margin-top: 5px;
+    }
+  }
+}
