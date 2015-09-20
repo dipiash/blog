@@ -5,10 +5,10 @@
         .card-content
           span.card-title.light-blue-text.text-darken-1
             = link_to "#{post.title.html_safe}", post
-          p = post.content.html_safe
+          p = "#{create_preview(post.content)}...".html_safe
         .card-action.grey-text.lighten-1
           time= "Дата создания: #{time_ago_in_words(post.created_at)} назад"
-          = link_to "Читать запись", post
+          = link_to "Читать полностью", post
 
 = will_paginate @posts, renderer: MaterializePagination::Rails
 
