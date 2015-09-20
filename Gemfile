@@ -17,6 +17,7 @@ gem 'slim'
 gem 'devise'
 gem 'devise-i18n'
 gem 'will_paginate'
+gem 'will_paginate-materialize'
 
 group :development, :test do
   gem 'byebug'

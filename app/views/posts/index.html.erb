@@ -6,7 +6,7 @@
 
   <%= link_to 'Создать новую запись', new_post_path, class: 'btn' %>
 
-  <%= will_paginate %>
+  <%= will_paginate @posts, renderer: MaterializePagination::Rails %>
 
   <table>
     <thead>
@@ -32,5 +32,5 @@
     </tbody>
   </table>
 
-  <%= will_paginate %>
+  <%= will_paginate renderer: MaterializePagination::Rails %>
 </div>
