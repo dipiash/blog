@@ -20,6 +20,7 @@ gem 'will_paginate'
 gem 'will_paginate-materialize'
 gem 'russian'
 gem 'ckeditor', :git => 'https://github.com/galetahub/ckeditor'
+gem 'rails-i18n', '~> 4.0.0'
 
 group :development, :test do
   gem 'byebug'
