@@ -5,7 +5,7 @@
   hr
   p= @post.content.html_safe
   hr
-  strong= "Дата публикации: #{time_ago_in_words(@post.created_at)} назад"
+  strong= "Дата публикации: #{@post.created_at.to_s(:db)}"
 
   - if user_signed_in?
     br

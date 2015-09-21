@@ -8,7 +8,7 @@
             = link_to "#{post.title.html_safe}", post
           p = "#{create_preview(post.content)}...".html_safe
         .card-action.grey-text.lighten-1
-          time= "Дата создания: #{time_ago_in_words(post.created_at)} назад"
+          time= "Дата публикации: #{post.created_at.to_s(:db)}"
           = link_to "Читать полностью", post
 
 = will_paginate @posts, renderer: MaterializePagination::Rails
