@@ -3,8 +3,8 @@
 = form_for(@post) do |f|
   - if @post.errors.any?
     div#error_explanation
-      h2= "#{@post.errors.count} #{t(:errors, count: @post.errors.count)} обнаружено при создании записи:"
-      ul
+      h5= "#{@post.errors.count} #{t(:errors, count: @post.errors.count)} обнаружено при создании записи:"
+      ul.red-text.text-lighten-1
         - @post.errors.full_messages.each do |message|
           li= message
 
