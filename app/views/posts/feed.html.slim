@@ -1,15 +1,14 @@
 - title '| Новости'
 .row
-  .col.s12
   - @posts.each do |post| %
-      .card.whith.z-depth-1
-        .card-content
-          span.card-title.light-blue-text.text-darken-1
-            = link_to "#{post.title.html_safe}", post
-          p = "#{create_preview(post.content)}...".html_safe
-        .card-action.grey-text.lighten-1
-          time= "Дата публикации: #{post.created_at.to_s(:db)}"
-          = link_to "Читать полностью", post
+    article.card.whith.z-depth-1
+      .card-content
+        span.card-title.light-blue-text.text-darken-1
+          = link_to "#{post.title.html_safe}", post
+        p = "#{create_preview(post.content)}...".html_safe
+      .card-action.grey-text.lighten-1
+        time= "Дата публикации: #{post.created_at.to_s(:db)}"
+        = link_to "Читать полностью", post
 
 = will_paginate @posts, renderer: MaterializePagination::Rails
 
