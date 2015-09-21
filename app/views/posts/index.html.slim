@@ -1,0 +1,26 @@
+.col.s12.z-depth-1.white style=("padding: 30px;")
+  h1 Список записей
+  p#notice= notice
+  = link_to 'Создать новую запись', new_post_path, class: 'btn'
+
+  = will_paginate @posts, renderer: MaterializePagination::Rails
+  table
+    thead
+      tr
+        th Название
+        th Текст записи
+        th Время создания
+        th Показать
+        th Редактировать
+        th Удалить
+    tbody
+      -@posts.each do |post|
+        tr
+          td = post.title.html_safe
+          td = post.content.html_safe
+          td = "#{time_ago_in_words(post.created_at)} назад"
+          td = link_to 'Показать', post
+          td = link_to 'Редактировать', edit_post_path(post)
+          td = link_to 'Удалить', post, method: :delete, data: { confirm: 'Вы уверены, что хотите удалить запись?' }
+
+  = will_paginate renderer: MaterializePagination::Rails
