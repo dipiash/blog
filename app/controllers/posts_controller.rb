@@ -5,11 +5,11 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.all.paginate(:page => params[:page], :per_page => 2)
+    @posts = Post.order(created_at: :desc).all.paginate(:page => params[:page], :per_page => 2)
   end
 
   def feed
-    @posts = Post.all.paginate(:page => params[:page], :per_page => 2)
+    @posts = Post.order(created_at: :desc).all.paginate(:page => params[:page], :per_page => 2)
   end
 
   # GET /posts/1
