@@ -4,8 +4,7 @@
   h3= @post.title.html_safe
   hr
   p= @post.content.html_safe
-  hr
-  strong= "Дата публикации: #{@post.created_at.to_s(:db)}"
+  time.grey-text.lighten-1= "Дата публикации: #{@post.created_at.to_s(:db)}"
 
   - if user_signed_in?
     br
