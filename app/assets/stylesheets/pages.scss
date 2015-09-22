@@ -10,6 +10,7 @@ body {
   margin: 0px auto;
   width: 100%;
   white-space: nowrap;
+  border-top: 1px solid #039BE5;
 
   @media (min-width: 561px) {
     display: flex;
@@ -39,6 +40,11 @@ body {
     text-transform: uppercase;
     letter-spacing: 0.8px;
     background: #fff;
+    border-right: 1px solid #039BE5;
+
+    &:last-child {
+      border-right: none;
+    }
 
     &--selected {
       background: #eee;
@@ -47,5 +53,39 @@ body {
     a {
       display: block;
     }
+  }
+}
+
+.logo {
+  box-sizing: border-box;
+  padding: 10px;
+  background: #fff;
+
+  &__title {
+    font-size: 2em;
+    color: #039BE5;
+    float: left;
+    margin-right: 10px;
+  }
+
+  &__about {
+    height: 45px;
+    padding-top: 18px;
+    font-size: 1em;
+    color: #9E9E9E;
+    float: left;
+  }
+}
+
+.b_clearfix {
+  zoom: 1; // for ie6/ie7
+
+  &:after {
+    clear: both;
+  }
+
+  &:after, &:before {
+    content: '';
+    display: table;
   }
 }
