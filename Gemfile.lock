@@ -226,6 +226,7 @@ DEPENDENCIES
   pg
   rails (= 4.2.4)
   rails-i18n (~> 4.0.0)
+  rake (~> 10.4.2)
   rspec-rails
   russian
   sass-rails (~> 5.0)
