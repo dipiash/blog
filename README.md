@@ -21,6 +21,7 @@ Cписок задачь:
 - [x] i18n для перевода
 - [x] Подключить codeship
 - [x] Подключить codeclimate
+- [ ] Покрытие тестами более 90%
 - [ ] Tags (gem acts-as-taggable-on)
 - [ ] Disqus
 - [ ] Opan graph
