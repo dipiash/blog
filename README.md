@@ -17,6 +17,8 @@ Cписок задачь:
 - [x] Вывод постов по дате создания
 - [x] Валидация для создания поста
 - [x] i18n для перевода
+- [x] Подключить codeship
+- [] Подключить codeclimate
 - [ ] Tags (gem acts-as-taggable-on)
 - [ ] Disqus
 - [ ] Opan graph
