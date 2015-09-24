@@ -1,8 +1,9 @@
 engines:
   rubocop:
     enabled: true
-    Rubocop/Lint/HandleExceptions:
-      enabled: false
+    checks:
+      Rubocop/Lint/HandleExceptions:
+        enabled: false
   golint:
     enabled: true
   gofmt:
