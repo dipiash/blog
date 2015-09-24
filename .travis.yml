@@ -3,7 +3,7 @@ language: ruby
 env:
   - DB=postgresql
 script:
-  - RAILS_ENV=test bundle exec rake db:migrate --trace
+  - RAILS_ENV=test CODECLIMATE_REPO_TOKEN=c6522b6c5598274d73cbd0d6191dae7e29d9ffae21737e9c59c5a36452aa44d8 bundle exec rake db:migrate --trace
   - bundle exec rake db:test:prepare
 
 before_script:
