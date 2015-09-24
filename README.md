@@ -24,7 +24,7 @@ Cписок задачь:
 - [x] Подключить codeclimate
 - [x] Поместить скрипты вниз страницы
 - [ ] Code coverage
-- [ ] Guard
+- [x] Guard
 - [ ] Покрытие тестами более 90%
 - [ ] Tags (gem acts-as-taggable-on)
 - [ ] Disqus
