@@ -26,6 +26,9 @@ gem 'rake', '~> 10.4.2'
 group :development, :test do
   gem 'byebug'
   gem 'rspec-rails'
+  gem 'spring-commands-rspec'
+  gem 'guard-rspec'
+  gem 'rb-fsevent' if `uname` =~ /Darwin/
 end
 
 group :development do
