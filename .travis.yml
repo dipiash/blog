@@ -8,6 +8,7 @@ script:
   - bundle exec rake
 
 before_script:
+  - cp config/database.yml.example config/database.yml
   - psql -c 'create database blog_test' -U postgres
 
 addons:
