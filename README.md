@@ -1,6 +1,7 @@
 #Блог на Ruby on Rails
 
 [![Codeship Status for blog](https://codeship.com/projects/fb605e10-4424-0133-c5ef-56a134140958/status?branch=master)](https://codeship.com/projects/104274/)
+[![Build Status](https://travis-ci.org/dipiash/blog.svg?branch=master)](https://travis-ci.org/dipiash/blog)
 [![Code Climate](https://codeclimate.com/github/dipiash/blog/badges/gpa.svg)](https://codeclimate.com/github/dipiash/blog)
 [![Test Coverage](https://codeclimate.com/github/dipiash/blog/badges/coverage.svg)](https://codeclimate.com/github/dipiash/blog/coverage)
 
@@ -23,7 +24,7 @@ Cписок задачь:
 - [x] Подключить codeship
 - [x] Подключить codeclimate
 - [x] Поместить скрипты вниз страницы
-- [ ] Code coverage
+- [x] Code coverage
 - [x] Travis CI
 - [x] Guard
 - [ ] Покрытие тестами более 90%
