@@ -28,6 +28,7 @@ Cписок задачь:
 - [x] Travis CI
 - [x] Guard
 - [ ] Покрытие тестами более 90%
+- [ ] Тесты с FactoryGirl
 - [ ] Tags (gem acts-as-taggable-on)
 - [ ] Disqus
 - [ ] Opan graph
