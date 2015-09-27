@@ -4,6 +4,7 @@ html
     title = "Dipiash #{yield(:title)}"
     = stylesheet_link_tag 'application', media: 'all'
     = stylesheet_link_tag 'https://fonts.googleapis.com/icon?family=Material+Icons', media: 'all'
+    = javascript_include_tag 'application'
     = csrf_meta_tags
   body
     .wrapper
@@ -12,7 +13,7 @@ html
         .col.s12
           = yield
       = render 'pages/footer'
-    = javascript_include_tag 'application'
+
     javascript:
       $(document).ready(function(){
         function selected_nav_item() {
