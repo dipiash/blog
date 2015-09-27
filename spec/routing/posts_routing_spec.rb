@@ -10,10 +10,10 @@ describe PostsController do
     fill_in 'Email', with: user.email
     fill_in 'Password', with: user.password
     click_on 'Войти'
+    expect(page).to have_title('Dipiash | Новости')
   end
 
   it "should be login is true" do
-    expect(page).to have_title('Dipiash | Новости')
     visit '/posts'
     expect(page).to have_title('Dipiash | Список записей')
   end
