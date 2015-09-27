@@ -56,4 +56,6 @@ RSpec.configure do |config|
 
   config.include FactoryGirl::Syntax::Methods
   config.include Capybara::DSL
+
+  config.include Devise::TestHelpers, type: :controller
 end
