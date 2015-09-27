@@ -5,6 +5,6 @@ module PostsHelper
   end
 
   def remove_truncate_text(post_content)
-    post_content.gsub!("&lt;truncate_text&gt;", "")
+    post_content.gsub!("&lt;truncate_text&gt;", "") || post_content
   end
 end
