@@ -30,7 +30,7 @@ Cписок задачь:
 - [ ] Покрытие тестами более 90%
 - [x] Тесты с FactoryGirl
 - [ ] Tags (gem acts-as-taggable-on)
-- [ ] Disqus
+- [x] Disqus
 - [ ] Opan graph
 - [ ] Rss
 - [ ] Поиск по тегам
