@@ -12,6 +12,14 @@ class PostsController < ApplicationController
     @posts = Post.order(created_at: :desc).all.paginate(:page => params[:page], :per_page => 7)
   end
 
+  def rss
+    respond_to do |format|
+      format.html { @posts = Post.order(created_at: :desc).all.paginate(:page => params[:page], :per_page => 14) }
+      format.atom { @posts = Post.order(created_at: :desc).limit(14) }
+      format.rss { @posts = Post.order(created_at: :desc).limit(14) }
+    end
+  end
+
   # GET /posts/1
   # GET /posts/1.json
   def show
