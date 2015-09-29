@@ -31,7 +31,7 @@ Cписок задачь:
 - [x] Тесты с FactoryGirl
 - [ ] Tags (gem acts-as-taggable-on)
 - [x] Disqus
-- [ ] Opan graph
+- [x] Opan graph
 - [ ] Rss
 - [ ] Поиск по тегам
 - [ ] Облако тегов
