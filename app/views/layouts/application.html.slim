@@ -1,12 +1,25 @@
 doctype html
 html
   head
-    title = "Dipiash #{yield(:title)}"
+    - og = opengraph_config("Dipiash #{yield(:title)}")
+    meta property="twitter:card" content="product"
+    meta property="twitter:site" content="@dipiash"
+    meta property="twitter:title" content="#{og[:og_title]}"
+    meta property="twitter:description" content="#{og[:og_description]}"
+    meta property="twitter:creator" content="@dipiash"
+
+    meta property="og:type" content="#{og[:og_type]}"
+    meta property="og:title" content="#{og[:og_title]}"
+    meta property="og:description" content="#{og[:og_description]}"
+    meta property="og:url" content="#{og[:og_url]}"
+
     = stylesheet_link_tag 'application', media: 'all'
     = stylesheet_link_tag 'https://fonts.googleapis.com/icon?family=Material+Icons', media: 'all'
     = javascript_include_tag 'application'
     = disqus_init
     = csrf_meta_tags
+
+    title = "Dipiash #{yield(:title)}"
   body
     .wrapper
       = render 'pages/nav'
