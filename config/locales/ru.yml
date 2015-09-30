@@ -4,3 +4,10 @@ ru:
     one: "ошибка"
     few: "ошибки"
     many: "ошибок"
+  ckeditor:
+    page_title: "CKEditor Files Manager"
+    confirm_delete: "Удалить файл?"
+    buttons:
+      cancel: "Отменить"
+      upload: "Загрузить"
+      delete: "Удалить"
