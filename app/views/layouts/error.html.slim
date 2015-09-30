@@ -1,0 +1,9 @@
+doctype html
+html
+  head
+    = stylesheet_link_tag 'errors', media: 'all'
+    = csrf_meta_tags
+
+    title = "Dipiash #{yield(:title)}"
+  body
+    = yield
