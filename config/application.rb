@@ -29,5 +29,8 @@ module Blog
     # custm exceptions 404/500/...
     require Rails.root.join("lib/custom_public_exceptions")
     config.exceptions_app = CustomPublicExceptions.new(Rails.public_path)
+
+    # Autoload ckeditor models folder (application.rb):
+    config.autoload_paths += %W(#{config.root}/app/models/ckeditor)
   end
 end
