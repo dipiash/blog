@@ -37,4 +37,5 @@ Cписок задачь:
 - [ ] Облако тегов
 - [x] Админка
 - [ ] Яндекс метрика
-- [ ] 404 страницу
+- [x] Handle for custom errors page
+- [ ] Стили для custom errors page
