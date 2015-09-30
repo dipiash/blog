@@ -8,6 +8,10 @@ Rails.application.routes.draw do
   match 'feed', to: 'posts#feed', via: :get
   match 'rss', to: 'posts#rss', via: :get
 
+  match '404', to: 'errors#error_404', via: [ :get, :post, :patch, :delete ], code: 404
+  match '422', to: 'errors#error_422', via: [ :get, :post, :patch, :delete ], code: 422
+  match '500', to: 'errors#error_500', via: [ :get, :post, :patch, :delete ], code: 500
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
