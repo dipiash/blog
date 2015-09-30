@@ -261,4 +261,5 @@ Devise.setup do |config|
   # config.omniauth_path_prefix = '/my_engine/users/auth'
 
   config.secret_key = 'secret_key_for_test' if Rails.env == 'test'
+  config.secret_key = ENV['SECRET_KEY_DEVISE']
 end
