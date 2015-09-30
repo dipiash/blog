@@ -32,7 +32,7 @@ Cписок задачь:
 - [ ] Tags (gem acts-as-taggable-on)
 - [x] Disqus
 - [x] Opan graph
-- [ ] Rss
+- [x] Rss
 - [ ] Поиск по тегам
 - [ ] Облако тегов
 - [x] Админка
