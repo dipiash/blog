@@ -6,4 +6,17 @@ html
 
     title = "Dipiash #{yield(:title)}"
   body
-    = yield
+    .container.white.z-depth-1
+      .error
+        .error__code = "#{@error_code}"
+        .error__message
+          = yield
+        .error__links
+          p
+            = "Вы можете вернуться на главную \
+              #{link_to "страницу", root_path}".html_safe
+            - if request.referer
+              = ", или на предыдущую \
+                #{link_to "страницу", URI(request.referer).path}.".html_safe
+            - else
+              = "."
