@@ -30,13 +30,13 @@ Cписок задачь:
 - [x] Guard
 - [ ] Покрытие тестами более 90%
 - [x] Тесты с FactoryGirl
-- [ ] Tags (gem acts-as-taggable-on)
+- [x] Tags (gem acts-as-taggable-on)
 - [x] Disqus
 - [x] Opan graph
 - [x] Rss
-- [ ] Поиск по тегам
+- [x] Поиск по тегам
 - [ ] Облако тегов
 - [x] Админка
-- [ ] Яндекс метрика
 - [x] Handle for custom errors page
 - [x] Стили для custom errors page
+- [ ] Задеплоить проект
