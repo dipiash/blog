@@ -6,7 +6,9 @@
         h5.card-title.light-blue-text.text-darken-1
           = link_to "#{post.title.html_safe}", post
         p = "#{create_preview(post.content)}...".html_safe
-        p = post.tag_list
+        p
+          span.grey-text.lighten-1 = "Теги: "
+          = "#{post.tag_list.map { |t| link_to t, tag_path(t) }.join(', ')}".html_safe
       .card-action.grey-text.lighten-1
         time(datetime="#{post.created_at.to_s(:db)}")= "Дата публикации: #{post.created_at.to_s(:db)}"
         = link_to "Читать полностью", post

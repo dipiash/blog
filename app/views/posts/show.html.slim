@@ -6,7 +6,7 @@ article.col.s12.z-depth-1.white style=("padding: 30px; margin-bottom: 10px;")
   p = "#{remove_truncate_text(@post.content)}".html_safe
   p
     span.grey-text.lighten-1 = "Теги: "
-    = @post.tag_list
+    = "#{@post.tag_list.map { |t| link_to t, tag_path(t) }.join(', ')}".html_safe
     br
     time.grey-text.lighten-1(datetime="#{@post.created_at.to_s(:db)}")= "Дата публикации: #{@post.created_at.to_s(:db)}"
 
