@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   match 'feed', to: 'posts#feed', via: :get
   match 'rss', to: 'posts#rss', via: :get
 
+  get 'tags/:tag', to: 'articles#index', as: :tag
+
   match '404', to: 'errors#error_404', via: [ :get, :post, :patch, :delete ], code: 404
   match '500', to: 'errors#error_500', via: [ :get, :post, :patch, :delete ], code: 500
 
