@@ -18,5 +18,9 @@
     br
     = f.cktext_area :content, :input_html => {:cols => 10, :rows => 40}, :toolbar => 'Full'
 
+  .field
+    = f.label :tag_list, 'Тэги (разделитель: запятая)'
+    = f.text_field :tag_list
+
   .actions style=('margin-top: 10px;')
     = f.submit 'Подтвердить', class: 'btn'
