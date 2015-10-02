@@ -9,7 +9,11 @@ class PostsController < ApplicationController
   end
 
   def feed
-    @posts = Post.order(created_at: :desc).all.paginate(:page => params[:page], :per_page => 7)
+    if params[:tag]
+      @posts = Post.tagged_with(params[:tag]).paginate(:page => params[:page], :per_page => 7)
+    else
+      @posts = Post.order(created_at: :desc).all.paginate(:page => params[:page], :per_page => 7)
+    end
   end
 
   def rss
