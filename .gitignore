@@ -13,3 +13,5 @@
 /tmp
 
 config/database.yml
+coverage/.last_run.json
+coverage/.resultset.json
