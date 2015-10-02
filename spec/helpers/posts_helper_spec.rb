@@ -3,7 +3,7 @@ require 'rails_helper'
 describe PostsHelper do
   let!(:user) { FactoryGirl.create(:user) }
   let!(:post) { FactoryGirl.create(:post, title: "TEST02",
-    content: "Yo! &lt;truncate_text&gt; No display text for preview.") }
+    content: "Yo! &lt;truncate_text&gt; No display text for preview.", user_id: user.id) }
 
   before do
     visit '/login'

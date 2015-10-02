@@ -2,7 +2,7 @@ require "rails_helper"
 
 describe PostsController do
   let!(:user) { FactoryGirl.create(:user) }
-  let!(:post) { FactoryGirl.create(:post, title: "TEST01") }
+  let!(:post) { FactoryGirl.create(:post, title: "TEST01", user_id: user.id) }
 
   before do
     visit '/login'
