@@ -25,6 +25,7 @@ gem 'rails-i18n', '~> 4.0.0'
 gem 'rake', '~> 10.4.2'
 gem 'disqus_rails'
 gem "unicorn-rails"
+gem 'acts-as-taggable-on', '~> 3.4'
 
 group :development, :test do
   gem 'byebug'
