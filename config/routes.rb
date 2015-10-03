@@ -7,8 +7,7 @@ Rails.application.routes.draw do
   match 'faq', to: 'pages#faq', via: :get
   match 'feed', to: 'posts#feed', via: :get
   match 'rss', to: 'posts#rss', via: :get
-
-
+  match 'cloud_tags', to: 'posts#cloud_tags', via: :get
 
   Blog::Application.routes.draw do
     get 'tags/:tag', to: 'posts#feed', as: :tag
