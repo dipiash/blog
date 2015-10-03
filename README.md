@@ -35,7 +35,7 @@ Cписок задачь:
 - [x] Opan graph
 - [x] Rss
 - [x] Поиск по тегам
-- [ ] Облако тегов
+- [x] Облако тегов
 - [x] Админка
 - [x] Handle for custom errors page
 - [x] Стили для custom errors page
