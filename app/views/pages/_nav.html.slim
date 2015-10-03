@@ -7,6 +7,8 @@ header.nav.row.z-depth-1
       li.nav_items__item
         = link_to 'Лента новостей', root_path
       li.nav_items__item
+        = link_to 'Облако тэгов', cloud_tags_path
+      li.nav_items__item
         = link_to 'FAQ', faq_path
       - if user_signed_in?
         li.nav_items__item
