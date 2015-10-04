@@ -3,6 +3,7 @@ require "spec_helper"
 
 describe "tt" do
   let!(:user) { FactoryGirl.create(:user) }
+  let!(:post) { FactoryGirl.create(:post, title: "TEST10", user_id: user.id) }
   before(:each) do
     visit '/login'
     expect(page).to have_title('Dipiash | Вход')
@@ -12,25 +13,41 @@ describe "tt" do
     expect(page).to have_title('Dipiash | Новости')
   end
 
-  it '#new create post and show full' do
-    visit 'posts/new'
-    expect(page).to have_title('Dipiash | Новая запись')
-    fill_in 'Название', with: 'Example title for create'
-    fill_in 'Текст записи', with: 'Example content &lt;truncate_text&gt; Example hide text'
-    click_on 'Подтвердить'
-    expect(page).to  have_title('Dipiash | Example title for create')
-    expect(page).to have_content('Example content Example hide text')
+  context 'Feed and Tags' do
+    it 'Should find post for tag' do
+      visit "/posts/#{post.id}"
+      expect(page).to have_title('Dipiash | TEST10')
+      click_link 'tag1'
+      expect(page).to have_content('TEST10')
+    end
+
+    it 'Shouldnt find post for tag' do
+      visit '/tags/tag12345'
+      expect(page).to have_content('Ничего не найдено. Нет записей.')
+    end
   end
 
-  it '#new create post and show preview' do
-    visit 'posts/new'
-    expect(page).to have_title('Dipiash | Новая запись')
-    fill_in 'Название', with: 'Example title for create'
-    fill_in 'Текст записи', with: 'Example content &lt;truncate_text&gt; Example hide text'
-    click_on 'Подтвердить'
-    visit '/'
-    expect(page).to  have_title('Dipiash | Новости')
-    expect(page).to have_content('Example content ...')
+  context 'Admin panel - CRUD for post' do
+    it '#new create post and show full' do
+      visit 'posts/new'
+      expect(page).to have_title('Dipiash | Новая запись')
+      fill_in 'Название', with: 'Example title for create'
+      fill_in 'Текст записи', with: 'Example content &lt;truncate_text&gt; Example hide text'
+      click_on 'Подтвердить'
+      expect(page).to  have_title('Dipiash | Example title for create')
+      expect(page).to have_content('Example content Example hide text')
+    end
+
+    it '#new create post and show preview' do
+      visit 'posts/new'
+      expect(page).to have_title('Dipiash | Новая запись')
+      fill_in 'Название', with: 'Example title for create'
+      fill_in 'Текст записи', with: 'Example content &lt;truncate_text&gt; Example hide text'
+      click_on 'Подтвердить'
+      visit '/'
+      expect(page).to  have_title('Dipiash | Новости')
+      expect(page).to have_content('Example content ...')
+    end
   end
 
   context 'RSS' do
