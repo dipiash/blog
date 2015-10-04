@@ -7,24 +7,21 @@ ul.collapsible data-collapsible="expandable"
       | Кратко о себе
     .collapsible-body
       p
-        | Меня зовут Дмитрий и я занимаюсь веб разработкой.
+        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo autem, voluptates rem. Odit quia a unde, voluptates tempore ad dolorum similique, sapiente eos hic illo laudantium libero voluptatibus, sit. Officia.
   li
     .collapsible-header.light-blue-text.text-darken-1
       i.material-icons> filter_2
       | Зачем мне блог
     .collapsible-body
       p
-        = 'Блог создан с целью упорядочивания собственных мыслей и знаний, '
-        = 'а также желанием повысить свое писатальское мастверство.'
+        |  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro nisi vel reiciendis impedit optio. Fuga non ullam illum, adipisci, vitae blanditiis dignissimos veritatis! Neque aut deleniti distinctio animi iste. Vel!
   li
     .collapsible-header.light-blue-text.text-darken-1
       i.material-icons> filter_3
       | О чем я буду писать
     .collapsible-body
       p
-        = 'В освном статьи будут касаться программирования и различных технологий которые меня интересуют.'
-        br
-        = 'Иногда буду публиковать небольшие обзоры на книги, которые прочитал (не только по программированию), или фильмы/сериалы, которые посмотрел и они меня чем-то зацепили.'
+        |  Lorem ipsum dolor sit amet, consectetur adipisicing elit. A amet, ratione saepe beatae ducimus voluptas est, asperiores quisquam minima veniam minus placeat eius libero cum magni voluptates consequatur obcaecati cupiditate.
   li
     .collapsible-header.light-blue-text.text-darken-1
       i.material-icons> filter_4
@@ -35,14 +32,20 @@ ul.collapsible data-collapsible="expandable"
   li
     .collapsible-header.light-blue-text.text-darken-1
       i.material-icons> filter_5
-      | Контакты
+      | Для агрегаторов
+    .collapsible-body
+      p
+        = "RSS: #{link_to 'ссылка', "#{rss_path}.rss", target: 'blank'}".html_safe
+        br
+        = "ATOM: #{link_to 'ссылка', "#{rss_path}.atom", target: 'blank'}".html_safe
+  li
+    .collapsible-header.light-blue-text.text-darken-1
+      i.material-icons> filter_5
+      | Github
     .collapsible-body
       p
         = 'GitHub: '
-        a href='https://github.com/dipiash' target='blank' dipiash
-        br
-        = 'Email: '
-        a href='mailto:dipiashblog@gmail.com' target='blank' dipiashblog@gmail.com
+        a href='https://github.com/dipiash/blog' target='blank' dipiash
 
 
 javascript:
