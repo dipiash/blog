@@ -32,4 +32,22 @@ describe "tt" do
     expect(page).to  have_title('Dipiash | Новости')
     expect(page).to have_content('Example content ...')
   end
+
+  context 'RSS' do
+    it '#rss html format' do
+      visit '/rss'
+      expect(page).to  have_title('Dipiash | Агрегатор')
+    end
+
+    it '#rss rss format' do
+      visit '/rss.rss'
+      expect(page).to  have_title('Dipiash. Блог о веб разработке и нетолько')
+    end
+
+    it '#rss atom format' do
+      visit '/rss.atom'
+      expect(page).to  have_title('Dipiash. Блог о веб разработке и нетолько')
+    end
+  end
+
 end
