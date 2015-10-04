@@ -54,4 +54,14 @@ describe PostsController do
     page.status_code == '200'
     expect(page).to have_title('Dipiash | Редактировать запись')
   end
+
+  it 'Error 404' do
+    visit '/404'
+    page.status_code == '404'
+  end
+
+  it 'Error 500' do
+    visit '/500'
+    page.status_code == '500'
+  end
 end
