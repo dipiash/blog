@@ -13,18 +13,45 @@ describe PostsController do
     expect(page).to have_title('Dipiash | Новости')
   end
 
-  it 'should be login is true' do
-    visit '/posts'
+  it 'Feed' do
+    visit root_path
+    page.status_code == '200'
+    expect(page).to have_title('Dipiash | Новости')
+  end
+
+  it 'FAQ' do
+    visit faq_path
+    page.status_code == '200'
+    expect(page).to have_title('Dipiash | FAQ')
+  end
+
+  it 'Cloud tags' do
+    visit cloud_tags_path
+    page.status_code == '200'
+    expect(page).to have_title('Dipiash | Облако тэгов')
+  end
+
+  it 'Admin panel - list posts' do
+    visit posts_path
+    page.status_code == '200'
     expect(page).to have_title('Dipiash | Список записей')
   end
 
-  it 'should validt title for post' do
+  it 'Testing tile post' do
     visit "posts/#{post.id}"
+    page.status_code == '200'
     expect(page).to have_title('Dipiash | TEST01')
   end
 
-  it '#new' do
-    visit '/posts/new'
+  it 'Admin panel - new post' do
+    visit new_post_path
+    page.status_code == '200'
     expect(page).to have_title('Dipiash | Новая запись')
+  end
+
+  it 'Admin panel - edit post' do
+    visit "posts/#{post.id}/edit"
+    page.status_code == '200'
+    expect(page).to have_title('Dipiash | Редактировать запись')
   end
 end
