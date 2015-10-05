@@ -1,14 +1,14 @@
 require "rails_helper"
 
 describe "Erros(page)" do
-  before(:all) do
-    Rails.application.config.action_dispatch.show_exceptions = true
-    Rails.application.config.consider_all_requests_local = false
-  end
-
-  after(:all) do
-    Rails.application.config.action_dispatch.show_exceptions = false
-    Rails.application.config.consider_all_requests_local = true
+  before do
+    method = Rails.application.method(:env_config)
+    expect(Rails.application).to receive(:env_config).with(no_args()) do
+      method.call.merge(
+        'action_dispatch.show_exceptions' => true,
+        'action_dispatch.show_detailed_exceptions' => false
+      )
+    end
   end
 
   it '404 page' do
