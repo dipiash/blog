@@ -28,4 +28,10 @@ describe "Erros(page)" do
     expect(page.status_code).to eq 404
     expect(page).to have_content('Увы, но запрашиваемая вами страница ненайдена.')
   end
+
+  it 'real page' do
+    visit '/'
+    expect(page.status_code).to eq 200
+    expect(page).to have_title('Dipiash | Новости')
+  end
 end
