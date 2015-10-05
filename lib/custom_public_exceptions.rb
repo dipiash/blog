@@ -4,8 +4,6 @@ class CustomPublicExceptions < ActionDispatch::PublicExceptions
 
     if status == '404' || status == '500'
       Rails.application.routes.call(env)
-    else
-      super
     end
   end
 end
