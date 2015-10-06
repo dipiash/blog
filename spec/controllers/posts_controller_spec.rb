@@ -48,6 +48,30 @@ describe "tt" do
       expect(page).to  have_title('Dipiash | Новости')
       expect(page).to have_content('Example content ...')
     end
+
+    it '#new error create post' do
+      visit 'posts/new'
+      fill_in 'Название', with: ''
+      fill_in 'Текст записи', with: 'Example content &lt;truncate_text&gt; Example hide text'
+      click_on 'Подтвердить'
+      expect(page).to have_content('Title не может быть пустым')
+    end
+
+    it '#update post success' do
+      visit "posts/#{post.id}/edit"
+      expect(page).to  have_title('Dipiash | Редактировать запись')
+      fill_in 'Название', with: 'NEW TITLE'
+      click_on 'Подтвердить'
+      expect(page).to  have_title('Dipiash | NEW TITLE')
+    end
+
+    it '#update post error' do
+      visit "posts/#{post.id}/edit"
+      expect(page).to  have_title('Dipiash | Редактировать запись')
+      fill_in 'Название', with: ' '
+      click_on 'Подтвердить'
+      expect(page).to have_content('Title не может быть пустым')
+    end
   end
 
   context 'RSS' do
