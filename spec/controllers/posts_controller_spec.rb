@@ -1,7 +1,7 @@
 require 'rails_helper'
 require "spec_helper"
 
-describe "tt" do
+describe '#PostsController' do
   let!(:user) { FactoryGirl.create(:user) }
   let!(:post) { FactoryGirl.create(:post, title: "TEST10", user_id: user.id) }
   before(:each) do
@@ -71,6 +71,12 @@ describe "tt" do
       fill_in 'Название', with: ' '
       click_on 'Подтвердить'
       expect(page).to have_content('Title не может быть пустым')
+    end
+
+    it '#delete post error' do
+      visit '/posts'
+      click_link('Удалить', match: :first)
+      expect(page).to have_content('Запись была успешно удалена.')
     end
   end
 
