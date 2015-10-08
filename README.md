@@ -28,7 +28,7 @@ Cписок задачь:
 - [x] Code coverage
 - [x] Travis CI
 - [x] Guard
-- [ ] Покрытие тестами более 90%
+- [x] Покрытие тестами более 90%
 - [x] Тесты с FactoryGirl
 - [x] Tags (gem acts-as-taggable-on)
 - [x] Disqus
