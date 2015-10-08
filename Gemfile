@@ -46,3 +46,5 @@ group :test do
   gem 'factory_girl_rails'
   gem 'codeclimate-test-reporter', group: :test, require: nil
 end
+
+gem 'rails_12factor', group: :production
