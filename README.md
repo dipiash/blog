@@ -6,7 +6,7 @@
 [![Test Coverage](https://codeclimate.com/github/dipiash/blog/badges/coverage.svg)](https://codeclimate.com/github/dipiash/blog/coverage)
 
 Данное приложение создано с целью тренировки и получения навыков, после прохождения railstutorial и чтения документации.
-Размещено на heroku: [blooming-ridge-8426.herokuapp.com](https://blooming-ridge-8426.herokuapp.com/)
+Размещено на heroku: [blogtestdipiash.herokuapp.com/](http://blogtestdipiash.herokuapp.com/)
 
 Cписок задач:
 - [x] Статические страницы
