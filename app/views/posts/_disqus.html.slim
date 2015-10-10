@@ -3,7 +3,7 @@ javascript:
   var disqus_shortname = 'blogtestdipiash';
   var disqus_identifier = "#{@post.created_at}-#{@post.id}";
   var disqus_title = "#{@post.title}";
-  var disqus_url = "#{url_for([@post, {only_url: false}])}";
+  var disqus_url = "#{root_path}/#{url_for([@post, {only_url: false}])}";
 
   (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
