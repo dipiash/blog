@@ -1,5 +1,5 @@
 atom_feed :language => 'en-US' do |feed|
-  feed.title "Dipiash. Блог о веб разработке и нетолько."
+  feed.title "Dipiash. Lorem ipsum dolor..."
   feed.updated @posts.maximum(:created_at)
 
   @posts.each do |post|

@@ -3,9 +3,9 @@
 xml.instruct! :xml, :version => "1.0"
 xml.rss :version => "2.0" do
   xml.channel do
-    xml.title "Dipiash. Блог о веб разработке и нетолько"
+    xml.title "Dipiash. Lorem ipsum dolor..."
     xml.author "Dipiash"
-    xml.description "Блог о веб разработке и нетолько"
+    xml.description "Lorem ipsum dolor..."
     xml.link "#{root_url}"
     xml.language "en"
 
