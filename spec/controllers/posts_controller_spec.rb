@@ -88,12 +88,12 @@ describe '#PostsController' do
 
     it '#rss rss format' do
       visit '/rss.rss'
-      expect(page).to  have_title('Dipiash. Блог о веб разработке и нетолько')
+      expect(page).to  have_title('Dipiash. Lorem ipsum dolor...')
     end
 
     it '#rss atom format' do
       visit '/rss.atom'
-      expect(page).to  have_title('Dipiash. Блог о веб разработке и нетолько')
+      expect(page).to  have_title('Dipiash. Lorem ipsum dolor...')
     end
   end
 
