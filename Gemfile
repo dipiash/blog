@@ -48,4 +48,7 @@ group :test do
   gem 'codeclimate-test-reporter', group: :test, require: nil
 end
 
-gem 'rails_12factor', group: :production
+group :production do
+  gem 'rails_12factor'
+  gem 'newrelic_rpm'
+end
