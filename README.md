@@ -41,3 +41,4 @@ Cписок задач:
 - [x] Handle for custom errors page
 - [x] Стили для custom errors page
 - [x] Задеплоить проект
+- [x] Подключить newrelic
