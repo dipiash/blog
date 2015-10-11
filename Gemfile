@@ -39,6 +39,7 @@ end
 group :development do
   gem 'web-console', '~> 2.0'
   gem 'spring'
+  gem 'newrelic_rpm'
 end
 
 group :test do
@@ -50,5 +51,4 @@ end
 
 group :production do
   gem 'rails_12factor'
-  gem 'newrelic_rpm'
 end
