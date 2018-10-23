@@ -21,7 +21,7 @@ gem 'will_paginate'
 gem 'will_paginate-materialize'
 gem 'russian'
 gem 'ckeditor', git: 'https://github.com/galetahub/ckeditor'
-gem 'paperclip'
+gem "paperclip", ">= 5.2.0"
 gem 'rails-i18n', '~> 4.0.0'
 gem 'rake', '~> 10.4.2'
 gem 'disqus_rails'
